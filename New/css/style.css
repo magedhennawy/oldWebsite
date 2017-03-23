@@ -1,0 +1,392 @@
+/*
+Here is where style constants should be stored for reference.
+
+Good CSS is hard. Here's my idea of good css.
+
+Colors
+======
+primary:
+secondary:
+
+light: #F7F7F5
+======
+
+Depth: 1-10
+
+
+*/
+
+::-moz-selection {
+  background: #e6e6e6;
+}
+::selection {
+  background: #e6e6e6;
+}
+
+/* ANIMATION STYLES */
+.fadeScroll {opacity: 0}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+/* STYLES */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "gothic";
+  background-color: #FFF;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-weight: 100;
+  color: #1e1e20;
+}
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "gothic";
+}
+.site-main {
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  min-height: 100%;
+}
+.wrapper {
+  padding: 0 60px;
+}
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.container-small {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.mountain-bg {
+  background: url("../img/background3.jpg") no-repeat center bottom; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+p.cta-button {
+  text-align: center;
+  padding-bottom: 50px;
+}
+p.cta-button a.btn {
+  padding: 10px 20px;
+  color: #08c;
+  border: 1px solid #08c;
+  border-radius: 4px;
+  font-family: "myriad";
+}
+p.cta-button a.btn:hover {
+  background-color: #08c;
+  color: #fff;
+}
+
+/* Vertically align something */
+.va {
+  display: table;
+  width: 100%;
+}
+.va > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* GLOBAL SECTION STYLES */
+section {
+  position: relative;
+}
+section.about,
+section.projects,
+section.contact {
+  padding: 50px 0 70px;
+}
+section p {
+  font-size: 1.1em;
+  letter-spacing: .025em;
+  line-height: 1.7;
+  font-weight: 300;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.5);
+}
+section h2 {
+  margin-bottom: 100px;
+  opacity: 0;
+  font-family: "myriad";
+  font-size: 4em;
+  font-weight: 100;
+  letter-spacing: -0.024em;
+  color: #333;
+  text-align: center;
+  padding: 2.5% 2.5% 2.5% 0;
+  z-index: 9;
+  position: relative;
+}
+section h3 {
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 1.6em;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* NAVBAR */
+nav {}
+nav.main-nav {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+  verflow: auto;
+}
+nav.main-nav.detached {
+  position: fixed;
+  background: #FFF;
+}
+nav.main-nav.hidden {
+  -webkit-transform: translate3d(0, -69px, 0);
+  -moz-transform: translate3d(0, -69px, 0);
+  transform: translate3d(0, -69px, 0);
+}
+nav.main-nav ul {
+  margin: 25px 0;
+  padding-left: 0;
+  padding-right: 0px;
+  overflow: auto;
+  margin: 25px auto;
+  width: 200px;
+}
+nav.main-nav ul li {
+  float: left;
+  margin: 0 10px;
+  font-weight: 300;
+  font-size: .875rem;
+}
+nav.main-nav ul li a {
+  color: rgba(255,255,255,1);
+}
+nav.main-nav.detached ul li a {
+  color: #000;
+  opacity: .4;
+}
+.main-nav-trigger {
+  position: fixed;
+  top: 10px;
+  right: 30px;
+  padding: 12px 0 8px;
+  z-index: 12;
+  cursor: pointer
+}
+a.main-nav-trigger {
+  color: #333;
+}
+@media (max-width: 700px) {
+  nav.main-nav ul {
+    width: 220px;
+  }
+  nav.main-nav ul li:nth-child(4),nav.main-nav ul li:nth-child(5) {
+    display: none;
+  }
+}
+
+/* INTRO */
+section.intro {
+  text-align: center;
+}
+section.intro .va {
+  height: 100vh;
+}
+section.intro h1 {
+  font-family: "myriad";
+  font-size: 4em;
+  text-align: center;
+  font-weight: 100;
+  color: #444;
+  color: #FFF;
+  letter-spacing: -0.024em;
+}
+section.intro p {
+  margin: 0;
+  margin-top: 50px;
+}
+section.intro img {
+  width: 120px;
+  transform: translate3d(-10px, 0, 0);
+}
+
+/* About */
+section.about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section.about h2 {
+  margin-bottom: 60px;
+}
+section.about .columns {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px
+}
+@media (max-width: 600px) {
+  section.about .columns {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+
+section.about .columns p:first-child {
+}
+section.about .columns p {
+  -webkit-font-smoothing: antialiased;
+  font-size: 1em;
+  font-weight: 300;
+  margin-top:0;
+  padding: 0;
+  color: #9B9BA3;
+  line-height: 1.85em;
+  letter-spacing: .02em;
+}
+
+/* PROJECTS */
+section.projects {
+  background: #f2f2f2;
+}
+section.projects:after {
+  background: rgb(245, 245, 245);
+}
+section.projects .container-small {
+  margin-bottom: 100px;
+}
+section.projects ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: auto;
+  z-index: 2;
+  position: relative;
+  margin-bottom: 75px;
+}
+section.projects ul li {
+  width: 42%;
+  margin: 0 4%;
+  float: left;
+  text-align: center;
+  margin-bottom: 40px;
+}
+section.projects ul li p {
+  font-family: "gothic";
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  font-size: 0.9em;
+  margin: 1em 0;
+}
+section.projects ul li a h4 {
+  font-family: "myriad";
+  -webkit-transition: .1s;
+  transition: .1s;
+  color: rgba(0,0,0,0.6);
+  font-weight: 300;
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+section.projects ul li h4 {
+  margin: 0;
+  font-size: 1.7em;
+}
+section.projects ul li a:hover h4 {
+  color: #08c;
+}
+section.projects ul li a p {
+  margin: 0;
+  color: rgba(0,0,0,0.5);
+}
+
+/* CONTACT */
+section.contact .social-links,
+section.contact .legal {
+  text-align: center;
+  font-size: .875rem;
+  margin-top: 100px;
+}
+section.contact {
+  padding-bottom: 100px;
+}
+section.contact .social-links a {
+  text-transform: capitalize;
+  letter-spacing: -0.03em;
+  margin:10px;
+  font-size: .875rem;
+  font-weight: 300;
+  color: #000;
+  opacity: .4;
+}
+section.contact .social-links a:hover {
+  text-decoration: underline;
+}
+
+section.contact .legal a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.imprint h1 {
+  color: #333;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 200px; 
+}
+.imprint .container-small {
+  text-align: left;
+}

@@ -1,0 +1,8 @@
+.easter-egg {
+    margin-left: -481px;
+    position: fixed;
+    height: 500px;
+    z-index: 10;
+    left: 50%;
+    top: -500px;
+}

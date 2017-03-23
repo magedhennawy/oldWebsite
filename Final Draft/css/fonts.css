@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'myriad';
+  font-style: thin;
+  font-weight: 300;
+  src: local('webfont'), url('../fonts/myriad-set-pro_text.woff') format("woff");
+}
+@font-face {
+  font-family: 'myriad';
+  font-style: thin;
+  font-weight: 100;
+  src: local('webfont'), url('../fonts/myriad-set-pro_thin.woff') format("woff");
+}
+
+
+@font-face {
+  font-family: 'gothic';
+  font-style: normal;
+  font-weight: 300;
+  src: local('webfont'), url('../fonts/vsco-gothic/VSCOGothic-Book.woff') format("woff");
+}
+@font-face {
+  font-family: 'gothic';
+  font-style: normal;
+  font-weight: 500;
+  src: local('webfont'), url('../fonts/vsco-gothic/VSCOGothic-Medium.woff') format("woff");
+}
+@font-face {
+  font-family: 'gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('webfont'), url('../fonts/vsco-gothic/VSCOGothic-SemiBold.woff') format("woff");
+}
